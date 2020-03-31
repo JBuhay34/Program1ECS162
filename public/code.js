@@ -1,6 +1,5 @@
-var slideIndex = 1;
 var timeLeft = 3622605;
-showSlides(slideIndex);
+
 
 var currTimer = setInterval(function(){
   if(timeLeft <= 0){
@@ -15,6 +14,10 @@ var currTimer = setInterval(function(){
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
