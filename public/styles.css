@@ -96,9 +96,6 @@ ul{
     display: none;
 }
 
-#firstImg{
-    display: block;
-}
 
 img{
     width: 100%;
@@ -190,7 +187,6 @@ img{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: aquamarine;
     }
 
     header{
@@ -230,4 +226,11 @@ img{
       }
 
 
+  }
+
+
+  @media only screen and (min-width: 1080px) {
+    #articleText{
+        margin:20px 200px;
+    }
   }

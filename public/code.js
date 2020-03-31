@@ -1,14 +1,28 @@
 var slideIndex = 1;
+var timeLeft = 3622605;
 showSlides(slideIndex);
 
-// Next/previous controls
+var currTimer = setInterval(function(){
+  if(timeLeft <= 0){
+    clearInterval(currTimer);
+  } else{
+    document.getElementById("numberId").textContent = numberWithCommas(timeLeft);
+    timeLeft -= 1;
+  }
+  console.log("timeLeft");
+}, 1000);
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  slideIndex = n;
+  showSlides(slideIndex);
 }
 
 function showSlides(n) {
