@@ -183,21 +183,7 @@ img{
     to {opacity: 1}
   }
 
-  @media only screen and (min-width: 1080px) {
-    #articleText{
-        margin:20px 240px;
-    }
 
-    nav{
-        justify-self: end;
-        margin: 40px;
-    }
-
-    header{
-        margin: 40px;
-
-    }
-  }
 
 @media only screen and (min-width: 768px) {
     .headerWnav{
@@ -225,6 +211,7 @@ img{
     footer{
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-around;
 
     }
 
@@ -246,3 +233,19 @@ img{
   }
 
 
+  @media only screen and (min-width: 1080px) {
+    #articleText{
+        margin:20px 240px;
+    }
+
+    nav{
+        justify-self: end;
+        margin: 40px;
+        margin-top: 40px;
+    }
+
+    header{
+        margin: 40px;
+
+    }
+  }
