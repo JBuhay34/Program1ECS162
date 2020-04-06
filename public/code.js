@@ -16,30 +16,37 @@ function numberWithCommas(x) {
 }
 
 var slideIndex = 1;
-showSlides(slideIndex);
+carousel(slideIndex);
 
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  if(n < -1){
+    n = -1;
+  } else if(n > 1){
+    n = 1;
+  }
+  carousel(slideIndex += n);
 }
 
 function currentSlide(n) {
   slideIndex = n;
-  showSlides(slideIndex);
+  carousel(slideIndex);
 }
 
-function showSlides(n) {
+function carousel(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementsByClassName("theSlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
+  // go back to slide 1 if we try to go to right on last slide
+  if (n > 4) {slideIndex = 1}
+  if (n < 1) {slideIndex = 4}
+  for (i = 0; i < 4; i++) {
       slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
+      // show that the dots aren't highlighted on current slide.
       dots[i].className = dots[i].className.replace(" active", "");
   }
+
+  // make current slide active and appearing.
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }

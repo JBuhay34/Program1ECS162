@@ -83,6 +83,7 @@ ul{
 .footerRegular{
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 /* Slideshow container */
@@ -92,7 +93,7 @@ ul{
     margin: auto;
   }
 
-.mySlides{
+.theSlides{
     display: none;
 }
 
@@ -234,6 +235,29 @@ img{
 
 
   @media only screen and (min-width: 1080px) {
+
+    .footerRegular{
+        line-height: 25px;
+    }
+
+    .footerItem{
+        margin: 5px 0px;
+    }
+    #manettishremmuseum{
+        flex-grow:3;
+        margin:5px 0px;
+    }
+
+    #times{
+        flex-grow:3;
+        margin: 5px 0px;
+    }
+
+    #address{
+        flex-grow: 1;
+        margin: 5px 0px;
+    }
+
     #articleText{
         margin:20px 240px;
     }
